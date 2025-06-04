@@ -8,7 +8,8 @@ import lombok.*;
 @Builder
 @Getter
 @Setter
-@AllArgsConstructor@NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "Customers")
 public class CustomerModel {
 
@@ -19,4 +20,44 @@ public class CustomerModel {
     private String address;
     private int mobile;
     private String email;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(int mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

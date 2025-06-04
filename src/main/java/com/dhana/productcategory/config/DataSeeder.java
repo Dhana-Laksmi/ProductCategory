@@ -1,14 +1,11 @@
 package com.dhana.productcategory.config;
 
-import ch.qos.logback.classic.Logger;
 import com.dhana.productcategory.Repository.CategoryRepository;
 import com.dhana.productcategory.Repository.CustomerRepository;
 import com.dhana.productcategory.Repository.ProductRepository;
 import com.dhana.productcategory.model.CategoryModel;
 import com.dhana.productcategory.model.CustomerModel;
 import com.dhana.productcategory.model.ProductModel;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -89,7 +86,6 @@ public class DataSeeder implements CommandLineRunner {
         decor.setImageUrl("https://placehold.co/600x400");
 
         productRepository.saveAll(Arrays.asList(phones,womenClothes,menClothes,kitchenItems,decor));
-        //productRepository.save(decar);
 
         CustomerModel cus1=new CustomerModel();
         cus1.setCustomerName("Dhana");
@@ -108,7 +104,6 @@ public class DataSeeder implements CommandLineRunner {
         cus3.setEmail("deivadhana@gmail.com");
         cus3.setAddress("add3");
         cus3.setMobile(433333);
-
 
         customerRepository.saveAll(Arrays.asList(cus1,cus2,cus3));
     }

@@ -8,8 +8,6 @@ import java.util.Set;
 
 @Entity
 @Data
-@Getter
-@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,7 +17,32 @@ public class CategoryModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private String categoryName;
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public Set<ProductModel> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Set<ProductModel> products) {
+        this.products = products;
+    }
 
 //    public CategoryModel(Long id, String categoryName, Set<ProductModel> products) {
 //        this.id = id;
